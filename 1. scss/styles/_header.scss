@@ -1,0 +1,33 @@
+body {
+    @include reset;
+}
+
+header {
+    background-color: $header-footer-color;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-family: $font-main;
+
+    .navigation {
+        margin: auto;
+        width: 20rem;
+        @include spaceBetween;
+    }
+
+    a {
+        img {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        color: $color-txt;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: $font-size;
+
+        &:hover {
+            color: $color-hover;
+        }
+    }
+}

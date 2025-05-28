@@ -1,0 +1,10 @@
+footer {
+    margin-top: 60px;
+    background-color: $header-footer-color;
+    @include center;
+
+    img{
+        width: 30px;
+        margin-top: 30px;
+    }
+}
