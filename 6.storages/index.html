@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <script src="storages.js"></script>
+    <button id="toggle-theme">გადართე თემა</button>
+
+    <h2>კონტაქტის ფორმა</h2>
+    <form id="contact-form">
+        <input type="text" id="step1" placeholder="შეიყვანე სახელი" required /><br/>
+        <input type="email" id="step2" placeholder="შეიყვანე ელფოსტა" required /><br/>
+
+        <label>
+            <input type="checkbox" id="remember-email"/> დამახსოვრება
+        </label><br/>
+
+        <button type="submit">გაგზავნა</button>
+    </form>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

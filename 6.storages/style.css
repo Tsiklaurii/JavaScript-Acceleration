@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+input,
+button {
+    margin: 10px 0;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+}

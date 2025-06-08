@@ -1,38 +1,18 @@
-// Local storage, Session storage, Cookies -> ბრაუზერის საცავები (ინახავენ ინფორმაციას დროებით ან სამუდამოდ)
-
-// Local storage -> ინახავს ინფორმაციას გრძელვადიანად, მანამ სანამ მომხმარებელი არ წაშლის ქეშს. 
-// აქვს offline რეჟიმის მხარდაჭერა, შეუძლია შეინახოს ინფორმაცია სესიის ბოლომდე, შეუძლია აპლიკაციის სტატუსის შენახვა
-// scope - ინფორმაცია ვრცელდება მთლიან ბრაუზერზე (ტაბებს შორის აქვს გაზიარებული დატა). არ აქვს კომუნიკაცია სერვერთან
-
-localStorage.setItem("userID", "Nino Tsiklauri");  // მონაცემის შენახვა: key: "userID"; value: "Nino Tsiklauri"
+localStorage.setItem("userID", "Saxeli Gvari"); 
 const userName = localStorage.getItem("userID");
-console.log(userName); // Nino Tsiklauri
+console.log(userName); // Saxeli Gvari
 
 localStorage.removeItem("userID");
-localStorage.clear(); // ინფორმაციის მთლიანად გასუფთავება
+localStorage.clear();
 
 
-// Session storage -> მონაცემები ინახება მხოლოდ ერთი ბრაუზერის სესიის განმავლობაში (ვებ-გვერდის გახსნიდან დახურვამდე), 
-// აქვს local storage-ზე ნაკლები მოცულობა. local storage-ის მსგავსად წვდომა აქვს მხოლოდ მიმდინარე დომეინზე, 
-// რომელიც გახსნილია კონკრეტული ბრაუზერის ტაბში. session storage-ში შენახული ინფორმაცია სერვერზე არ იგზავნება
-// scope - ინფორმაცია ვრცელდება მხოლოდ კონკრეტულ ტაბზე.
+sessionStorage.setItem("userID2", "Saxeli Gvari");
+sessionStorage.getItem("userID2"); 
+sessionStorage.removeItem("userID2"); 
+sessionStorage.clear(); 
 
-sessionStorage.setItem("userID2", "Nino Tsiklauri"); // ინფორმაციის დასეტვა
-sessionStorage.getItem("userID2"); // ინფორმაციის მიღება
-sessionStorage.removeItem("userID2"); // კონკრეტული ინფორმაციის წაშლა
-sessionStorage.clear(); // ინფორმაციის მთლიანად გასუფთავება
-
-
-// Cookies storage -> გამოიყენება სერვერსა და ბრაუზერს შორის ინფორმაციის გასაცვლელად. პატარა ტექსტური ფაილი, 
-// რომელსაც სერვერი უგზავნის მომხმარებლის ბრაუზერს, ბრაუზერი ინახავს და ყოველ მომდევნო მოთხოვნაზე იმავე სერვერზე 
-// ავტომატურად უგზავნის მას უკან. აქვს მცირე მოცულობა (დაახ: 4kb). შესაძლებელია ვადის განსაზღვრა
-
-// გამოყენება: მომხმარებლის ავტორიზაციის სტატუსის შენახვა, მომხმარებელს ავარჩევინოთ ენა, სარეკლამო მიზნებისთვის 
-// მომხმარებლის აქტივობაზე თვალყურის დევნება
 
 // cookies დაყენება 
 document.cookie = "username=JohnDOE; expires=THU, 18 Dec 2025 12:00 GMT; PATH=/";
-
-// ყველა cookies წაკითხვა 
 let cookies = document.cookie
 console.log(cookies);
